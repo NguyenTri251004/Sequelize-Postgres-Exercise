@@ -30,12 +30,10 @@ app.engine(
   })
 );
 app.set("view engine", "hbs");
-
 //routes
 //index: / , /blogs
 //details: /blogs/:id
 app.get("/", (req, res) => res.redirect("/blogs"));
 app.use("/blogs", require('./routes/blogRouter'));
-
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
